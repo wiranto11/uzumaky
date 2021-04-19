@@ -38,23 +38,31 @@ footer {
   height: 80vh;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 16), 0 3px 6px rgba(0, 0, 0, 23);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   align-items: center;
   padding: 1em;
   overflow: hidden;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 1000px) {
-  .card {
+  .content {
     flex-direction: row-reverse;
     /* justify-content: space-between; */
   }
-  .card img.reading {
+  .content img .reading {
     width: 100%;
     max-width: 40vw;
     max-height: unset;
+  }
+
+  .content {
+    padding: 2.5em 0px 0px 1em;
   }
 }
 
@@ -70,7 +78,7 @@ footer {
 } */
 
 img.reading {
-  max-height: 40vh;
+  max-height: 30vh;
 }
 .text {
   padding: 1em;
